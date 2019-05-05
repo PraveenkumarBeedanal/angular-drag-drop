@@ -1,13 +1,16 @@
 <h3>Drag and Drop to Table</h3>
-        <ul style="margin:0;padding:0">
-            <li *ngFor="let hero of availableHeros" pDraggable="heroes"
-                (onDragStart)="dragStart($event,hero)" (onDragEnd)="dragEnd($event)">
+      <div>
+      <div>
+        <ul style="margin:0;padding:0;color:black:">
+            <li *ngFor="let hero of availableHeros" [pDraggable]="'heroes'" dragEffect = "copyLink"
+            (onDragStart)="dragStart($event,hero)" (onDragEnd)="dragEnd($event)">
                 <div>{{hero.id}} - {{hero.name}}</div><br/>
             </li>
         </ul>
+      </div>
 
-      <div class="ui-g-12 ui-md-6 drop-column" pDroppable="heroes" 
-        (onDrop)="drop($event)" [ngClass]="{'ui-highlight-car':draggedHero}">
+      <div class="ui-g-12 ui-md-6 drop-column" [pDroppable]="'heroes'" 
+        (onDrop)="drop($event)" dropEffect="link" [ngClass]="{'ui-highlight-car':draggedHero}"><br/>
         <p-table [value]="selectedHeros">
             <ng-template pTemplate="header">
                 <tr>
@@ -23,3 +26,6 @@
             </ng-template>
         </p-table>
     </div>
+      </div>
+
+  

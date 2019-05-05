@@ -25,7 +25,7 @@ export class AppComponent  {
 
     dragStart(event,hero: Hero) {
         this.draggedHero = hero;
-        console.log('its working'+ this.draggedHero.id);
+        console.log('its working '+ this.draggedHero.name);
     }
 
     drop(event) {
@@ -41,10 +41,10 @@ export class AppComponent  {
         this.draggedHero = null;
     }
 
-    findIndex(car: Hero) {
+    findIndex(hero: Hero) {
         let index = -1;
         for(let i = 0; i < this.availableHeros.length; i++) {
-            if(car.id === this.availableHeros[i].id) {
+            if(hero.id === this.availableHeros[i].id) {
                 index = i;
                 break;
             }

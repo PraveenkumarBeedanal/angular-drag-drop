@@ -1,0 +1,10 @@
+.upload-drop-zone {
+    color: #ccc;
+    border-style: dashed;
+    border-color: #ccc;
+    line-height: 200px;
+    text-align: center
+}
+.another-file-over-class {
+    border: dashed 3px green;
+}

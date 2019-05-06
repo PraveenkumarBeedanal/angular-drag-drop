@@ -1,0 +1,12 @@
+<!-- Drop Zone -->
+            <h4>Or drag and drop files below</h4>
+        <br>
+            <!--<div class="upload-drop-zone" id="drop-zone">-->
+                <!--Just drag and drop files here-->
+            <!--</div>-->
+        <div ng2FileDrop
+             [ngClass]="{'another-file-over-class': hasBaseDropZoneOver}"
+             (fileOver)="fileOverBase($event)"
+             class="well upload-drop-zone">
+            Drop Files Here
+        </div>

@@ -9,7 +9,7 @@
         </ul>
       </div>
 
-      <div class="ui-g-12 ui-md-6 drop-column" 
+      <div class="ui-g-12 ui-md-6 drop-column" [pDroppable]="'heroes'" 
         (onDrop)="drop($event)" dropEffect="link" [ngClass]="{'ui-highlight-car':draggedHero}"><br/>
         <p-table [value]="selectedHeros">
             <ng-template pTemplate="header">

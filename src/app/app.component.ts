@@ -29,7 +29,6 @@ export class AppComponent  {
     }
 
     drop(event) {
-      console.log(event);
         if(this.draggedHero) {
             let draggedHeroIndex = this.findIndex(this.draggedHero);
             this.selectedHeros = [...this.selectedHeros, this.draggedHero];
